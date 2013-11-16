@@ -2480,8 +2480,9 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 .well {
   background-color: #262626;
   margin-bottom: 20px;
-  padding: 19px;
-  min-height: 500px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  min-height: 600px;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
 /**/

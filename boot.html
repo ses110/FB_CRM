@@ -81,33 +81,43 @@
     <div class="container-fluid">
       <div class="sidebar">
         <div class="well">
-          <ul style="list-style-type:none; font-size: 1.2em; ">
-            <li style="line-height: 2.5em;">Team Tasks</li>
-            <li style="line-height: 2.5em;">My Tasks</li>
-            <li style="line-height: 2.5em;">Online</li>
-            <li style="line-height: 2.5em;">New Campaign</li>
+          <ul style="list-style-type:none; font-size: 1.2em; width: 100%; margin-left: 0px">
+            <li style="padding-left: 20px; line-height: 3.1em; vertical-align: middle; background-color: #202020;">Team Tasks
+              <span style="background-image: url(./images/grey_icon.png); color:#ffffff; width: 30px; height: 20px; float: right; line-height: 20px; text-align: center; ">
+                24
+              </span>
+            </li>
+            <li style="padding-left: 20px; line-height: 3.1em;">
+              My Tasks
+              <span style="background-image: url(./images/grey_icon.png); color:#ffffff; width: 30px; height: 20px; float: right; line-height: 20px; text-align: center;vertical-align: middle;">
+                4
+              </span>
+            </li>
+            <li style="padding-left: 20px; line-height: 3.1em;">Online</li>
+            <li style="padding-left: 20px; line-height: 3.1em;">New Campaign +</li>
           </ul>
-          <p style="margin-top:60px;">Email Support</p>
+          <p style="padding-left: 20px; color: #666666; margin-top:60px; font-size: 1.2em; margin-bottom: 35px;">Email Support </p>
+
           <ul style="list-style-type:none; font-size: 1.2em; ">
-            <li style="line-height: 2.5em;">
-              <img src="./images/red.png" style="margin-right: 2px; float: left;"> 
+            <li style="line-height: 3.0em; ">
+              <img src="./images/red.png" style="margin-right: 2px; float: left; padding-right: 10px;"> 
                 New
             </li>
-            <li style="line-height: 2.5em;">
-              <img src="./images/orange.png" style="margin-right: 2px; float: left;">
+            <li style="line-height: 3.1em;">
+              <img src="./images/orange.png" style="margin-right: 2px; float: left; padding-right: 10px;">
               In Dev
             </li>
-            <li style="line-height: 2.5em;">
-              <img src="./images/green.png" style="margin-right: 2px; float: left;">
+            <li style="line-height: 3.1em;">
+              <img src="./images/green.png" style="margin-right: 2px; float: left; padding-right: 10px;">
               Resolved
             </li>
             <li style="line-height: 2.5em;">
-              <img src="./images/cyan.png" style="margin-right: 2px; float: left;">
+              <img src="./images/cyan.png" style="margin-right: 2px; float: left; padding-right: 10px;">
               Notify
             </li>
 
             <li style="line-height: 2.5em;">
-              <img src="./images/grid.png" style="margin-right: 2px; float: left;">
+              <img src="./images/grid.png" style="margin-right: 2px; float: left; padding-right: 10px;">
               Add New
             </li>
           </ul>
@@ -127,18 +137,37 @@
                 <img src="./images/gear.png" style="display: inline; float: right;">
               </h4>
               
-              <div style="min-width: 100%;">
+              <div style="min-width: 100%; margin-bottom: 20px">
                 <div style="width: 15%; float:left; height: 35px; background-color: #C0504D; color: #632523; font-size: 1.15em; vertical-align: middle; line-height: 35px; text-align:center;">4 new</div>
                 <div style="width: 15%; float:left; height: 35px; background-color: #F79646; color: #984807; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">4 in Dev</div>
                 <div style="width: 40%; float:left; height: 35px; background-color: #9BBB59; color: #4F6228; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">10 Resolved</div>
                 <div style="width: 30%; float:left; height: 35px; background-color: #4BACC6; color: #215968; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">7 Notify</div>
               </div>
 
-              <p style="padding-left: 10px">Contacts</p>
+              <p style="padding: 0px">Contacts</p>
 
             </div>
 
             <table>
+
+              <tr>
+                <td style="width:60%">
+                  <img src="http://placehold.it/50x50" style="float:left; padding-left: 15px; padding-right: 10px">
+                  <h7>Name to be fetched</h7>
+                  <p>
+                    <script>
+                      document.write(readThread(0));
+                    </script>
+                  </p>
+                </td>
+                <td>
+                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
+                </td>
+              </tr>
+
               <tr>
                 <td style="width: 60%;">
                    <img src="http://placehold.it/50x50" style="float:left; padding-left: 15px; padding-right: 10px">
@@ -152,6 +181,8 @@
                   <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
+
+
               <tr>
                 <td>
                   <img src="http://placehold.it/50x50" style="float:left; padding-left: 15px; padding-right: 10px">
@@ -239,7 +270,7 @@
       }
 
       function readMessages() {
-          FB.api('/629564354?fields=id,name,threads,inbox', function(response) {
+          FB.api('/759667353?fields=id,name,threads,inbox', function(response) {
             console.log(response.threads);
             console.log(response.inbox.data);
             var threadsAvailable;
