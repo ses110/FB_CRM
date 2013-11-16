@@ -171,9 +171,9 @@
 
               <tr class="unstyled" ng-repeat="thread in threads">
                 <td style="width: 60%;">
-                  <img ng-model-instant src={{"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1116314_629564354_324251643_q.jpg"}} style="float:left; padding-left: 15px; padding-right: 10px">
-                  <h7>{{thread.participants}}</h7>
-                  <p>{{thread.snippet}}</p>
+                  <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1116314_629564354_324251643_q.jpg" style="float:left; padding-left: 15px; padding-right: 10px">
+                  <h7>{{thread.get('participants').data[1].name}}</h7>
+                  <p>{{thread.get('snippet')}}</p>
                 </td>
                 <td>
                   <img src="./images/red.png" style="margin-right: 2px; float: left;">

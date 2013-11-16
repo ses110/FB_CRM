@@ -5,19 +5,19 @@ function fbprm($scope) {
 console.log('variables Initializing')
 	//Initializing variables
 	$scope.user = Parse.User.current();
-	//$scope.threads;
+	$scope.threads = [];
 
 	//preset threads
-	$scope.threads = [
-		{snippet: "snippet1", participants: "bob1", stage: "new", thread: "fskfjahf", id: "davefontenot", proPic: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg"},
-		{snippet: "snippet2", participants: "bob2", stage: "new", thread: "fskfjahf", id: "davefontenot", proPic: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg"}
-	]
+	//$scope.threads = [
+	//	{snippet: "snippet1", participants: "bob1", stage: "new", thread: "fskfjahf", id: "davefontenot", proPic: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg"},
+	//	{snippet: "snippet2", participants: "bob2", stage: "new", thread: "fskfjahf", id: "davefontenot", proPic: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg"}
+	//]
 
 	$scope.addThread = function (thread) {
 		$scope.threads.push(thread);
 	}	
 
-	$scope.addThread({snippet: "blah", participants: "blahblah"});
+	//$scope.addThread({snippet: "blah", participants: "blahblah"});
 
 	$scope.updatePics = function() {
 		for (i=0; i < $scope.threads.length; i++) {
@@ -39,29 +39,34 @@ console.log('variables Initializing')
         var query = new Parse.Query(Thread);
         //Find all posts by the current user
         query.equalTo("user", $scope.user);
-        query.limit('3');
+        query.limit('15');
         query.find({
           success: function(usersThreads) {
             for (i = 0; i < usersThreads.length; i++) {
             	$scope.addThread(usersThreads[i]);
+            	console.log(usersThreads[i].get('snippet'));
+            	console.log(usersThreads[i].get('participants').data[1].name);
+            	//console.log(usersThreads[i]);
             }
+            $scope.updateThreads();
             //usersThreads;
-            console.log('loaded threads');
-            console.log($scope.threads);
+            //console.log('loaded threads');
+            //console.log($scope.threads);
           }
         });
 	}
 
 	$scope.updateThreads = function () {
+		console.log('updated')
 		//$scope.grabThreads();
 		//console.log("can push them onto array here");
 		//console.log($scope.threads);
-		for (i=0; i < 3; i++) {
+		//for (i=0; i < 3; i++) {
 			//console.log($scope.threads[i]);
 			//console.log($scope.getSnippetForThread($scope.threads[i]));
 			//$scope.threads.push($scope.threads[i]);
-			$scope.addThread({snippet: "snippet3", participants: "bob3", stage: "new", thread: "fskfjahf", id: "davefontenot", proPic: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg"})
-		}
+			//$scope.addThread({snippet: "snippet3", participants: "bob3", stage: "new", thread: "fskfjahf", id: "davefontenot", proPic: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg"})
+		//}
 	}
 
 	$scope.getThreadAtIndex = function (index) {
