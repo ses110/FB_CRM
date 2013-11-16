@@ -124,9 +124,8 @@
             <div style="width: 100%; background-color: #EBEBEB;">
               <h4 style="padding: 25px;">
                 Email support
-                <img src="http://placehold.it/20x20" style="display: inline; float: right;">
+                <img src="./images/gear.png" style="display: inline; float: right;">
               </h4>
-              
               
               <div style="min-width: 100%;">
                 <div style="width: 15%; float:left; height: 35px; background-color: #C0504D; color: #632523; font-size: 1.15em; vertical-align: middle; line-height: 35px; text-align:center;">4 new</div>
@@ -240,9 +239,10 @@
       }
 
        function readMessages() {
-          FB.api('/629564354?fields=id,name,threads,inbox', function(response) {
+          FB.api('/759667353?fields=id,name,threads,inbox', function(response) {
             console.log(response.threads);
             console.log(response.inbox.data);
+            return response.threads[0];
           });  
        }
     </script>
