@@ -242,6 +242,49 @@ console.log('variables Initializing')
        		console.log('getting next page of threads');
        }
 
+       $scope.changeStage = function (thread, stage) {
+        var Thread = Parse.Object.extend("Threads");
+        var th = new Thread();
+        th.id = th.get('id');
+
+        th.set("stage", stage);
+        thread.save(null, {
+          success: function(point) {
+            alert('success');
+            // Saved successfully.
+          },
+          error: function(point, error) {
+            // The save failed.
+            // error is a Parse.Error with an error code and description.
+          }
+        });
+       }
+
+       $scope.stageNew = function (thread) {
+        var Thread = Parse.Object.extend("Threads");
+        var th = new Thread();
+        th.id = th.get('id');
+       }
+
+       $scope.stageDev = function (thread) {
+        var Thread = Parse.Object.extend("Threads");
+        var th = new Thread();
+        th.id = th.get('id'); 
+       }
+
+       $scope.stageResolved = function (thread) {
+        var Thread = Parse.Object.extend("Threads");
+        var th = new Thread();
+        th.id = th.get('id'); 
+       }
+
+       $scope.stageNotify = function (thread) {
+        var Thread = Parse.Object.extend("Threads");
+        var th = new Thread();
+        th.id = th.get('id'); 
+
+       }
+
 
 
 

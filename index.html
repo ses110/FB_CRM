@@ -183,13 +183,13 @@
                 </td>
                 <td>
                   <img ng-hide={{newb}} src="./images/red.png" style="margin-right: 2px; float: left;">
-                  <img ng-show={{newb}} src="./images/red_hollow.png" style="margin-right: 2px; float: left;">
+                  <img ng-click="changeStage(thread, 'new')" ng-show={{newb}} src="./images/red_hollow.png" style="margin-right: 2px; float: left;">
                   <img ng-hide={{dev}} src="./images/orange.png" style="margin-right: 2px; float: left;">
-                  <img ng-show={{dev}} src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
+                  <img ng-click="stageDev(thread)" ng-show={{dev}} src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
                   <img ng-hide={{resolved}} src="./images/green.png" style="margin-right: 2px; float: left;">
-                  <img ng-show={{resolved}} src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
+                  <img ng-click="stageResolved(thread)" ng-show={{resolved}} src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
                   <img ng-hide={{notify}} src="./images/cyan.png" style="margin-right: 2px; float: left;">
-                  <img ng-show={{notify}} src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
+                  <img ng-click="stageNotify(thread)" ng-show={{notify}} src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
 <!--
