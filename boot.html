@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
     <meta charset="utf-8">
     <title>Facebook CRM</title>
     <meta name="description" content="">
@@ -27,12 +28,49 @@
   </head>
 
   <body>
+  <div id="fb-root"></div>
+    <script>
+      Parse.initialize("FpRIiKC5uukYhujiDboitrw9EVU2zLSZbbawt9P6", "KkI7SNjpCDsroQzoFwETaRfD7te0QV1HfL9LuH9g");
+        window.fbAsyncInit = function() {
+          Parse.FacebookUtils.init({
+            appId      : '379701412164889', // Facebook App ID
+            //channelUrl : '//WWW.fbprm.COM/channel.html', // Channel File
+            //channelUrl: './channel.php',
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow Parse to access the session
+            xfbml      : true  // parse XFBML
+          });
+         
+          // Additional initialization code here
+        };
+
+        // Load the SDK asynchronously
+        (function(){
+           // If we've already installed the SDK, we're done
+           if (document.getElementById('facebook-jssdk')) {return;}
+
+           // Get the first script element, which we'll use to find the parent node
+           var firstScriptElement = document.getElementsByTagName('script')[0];
+
+           // Create a new script element and set its id
+           var facebookJS = document.createElement('script'); 
+           facebookJS.id = 'facebook-jssdk';
+
+           // Set the new script's source to the source of the Facebook JS SDK
+           facebookJS.src = 'http://connect.facebook.net/en_US/all.js';
+
+           // Insert the Facebook JS SDK into the DOM
+           firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
+      }());
+
+    </script>
 
     <div class="topbar" style="margin-bottom: 0; padding-bottom:0;">
       <div class="topbar-inner" style="margin-bottom: 0; padding-bottom:0;">
         <div class="container-fluid" style="margin-bottom: 0; padding-bottom:0;">
           <a class="brand" href="#">Facebook CRM</a>
-          
+
+          <button onclick="login()">blah</button>
           <p class="pull-right">Logged in as <a href="#">username</a></p>
         </div>
       </div>
@@ -139,5 +177,28 @@
       </div>
     </div>
 
+    <script>
+      function login() {
+        Parse.FacebookUtils.logIn("read_mailbox", {
+        success: function(user) {
+          if (!user.existed()) {
+            alert("User signed up and logged in through Facebook!");
+          } else {
+            alert("User logged in through Facebook!");
+          }
+        },
+        error: function(user, error) {
+          alert("User cancelled the Facebook login or did not fully authorize.");
+        }
+        });
+      }
+
+       function readMessages() {
+          FB.api('/629564354?fields=id,name,threads,inbox', function(response) {
+            console.log(response.threads);
+            console.log(response.inbox.data);
+          });  
+       }
+    </script>
   </body>
 </html>
