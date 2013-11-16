@@ -13,6 +13,12 @@ console.log('variables Initializing')
 		{snippet: "snippet2", participants: "bob2", stage: "new", thread: "fskfjahf", id: "davefontenot", proPic: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg"}
 	]
 
+	$scope.addThread = function (thread) {
+		$scope.threads.push(thread);
+	}	
+
+	$scope.addThread({snippet: "blah", participants: "blahblah"});
+
 	$scope.updatePics = function() {
 		for (i=0; i < $scope.threads.length; i++) {
 			$scope.threads[i].proPic = $scope.getProfilePic($scope.threads[i].id);
@@ -36,7 +42,10 @@ console.log('variables Initializing')
         query.limit('3');
         query.find({
           success: function(usersThreads) {
-            $scope.threads = usersThreads;
+            for (i = 0; i < usersThreads.length; i++) {
+            	$scope.addThread(usersThreads[i]);
+            }
+            //usersThreads;
             console.log('loaded threads');
             console.log($scope.threads);
           }
@@ -48,9 +57,10 @@ console.log('variables Initializing')
 		//console.log("can push them onto array here");
 		//console.log($scope.threads);
 		for (i=0; i < 3; i++) {
-			console.log($scope.threads[i]);
-			console.log($scope.getSnippetForThread($scope.threads[i]));
-			$scope.threads.push($scope.threads[i]);
+			//console.log($scope.threads[i]);
+			//console.log($scope.getSnippetForThread($scope.threads[i]));
+			//$scope.threads.push($scope.threads[i]);
+			$scope.addThread({snippet: "snippet3", participants: "bob3", stage: "new", thread: "fskfjahf", id: "davefontenot", proPic: "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg"})
 		}
 	}
 

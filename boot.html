@@ -87,7 +87,7 @@
           <button ng-click="readMessages()">read messages</button>
           <button ng-click="getProfilePic('yefim323')">get profile pic</button>
           <button ng-click="updatePics()">update Pics</button>
-          <button ng-click="updateThreads()">update threads</button>
+          <button ng-click="addThread()">update threads</button>
 
           <p class="pull-right">Logged in as <a href="#">username</a></p>
         </div>
@@ -169,11 +169,11 @@
             <!--THREADS BEGIN-->
             <table>
 
-              <tr class="unstyled" ng-model-instant ng-repeat="thread in threads">
+              <tr class="unstyled" ng-repeat="thread in threads">
                 <td style="width: 60%;">
                   <img ng-model-instant src={{"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1116314_629564354_324251643_q.jpg"}} style="float:left; padding-left: 15px; padding-right: 10px">
-                  <h7 ng-model-instant>{{thread.participants}}</h7>
-                  <p ng-model-instant>{{thread.snippet}}</p>
+                  <h7>{{thread.participants}}</h7>
+                  <p>{{thread.snippet}}</p>
                 </td>
                 <td>
                   <img src="./images/red.png" style="margin-right: 2px; float: left;">
