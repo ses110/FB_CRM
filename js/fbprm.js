@@ -174,7 +174,7 @@ console.log('variables Initializing')
        }
 
        $scope.filterByStage = function (stage) {
-          alert(stage);
+          //alert(stage);
           var Thread = Parse.Object.extend("Threads");
           var query = new Parse.Query(Thread);
        		console.log('showing only threads with this stage');
@@ -197,31 +197,53 @@ console.log('variables Initializing')
         });
        }
 
+       $scope.setInitStageValues = function () {
+        $scope.newb = true;
+
+       $scope.dev = true;
+
+       $scope.resolved = true;
+
+       $scope.notify = true;
+       }
+
+
        $scope.filterByStageNew = function () {
-        alert('washjhfahfk');
+         $scope.setInitStageValues()
+        //alert('washjhfahfk');
           $scope.filterByStage('new');
           $scope.updateThreads();
+          $scope.newb = false;
        }
 
         $scope.filterByStageDev = function () {
+           $scope.setInitStageValues()
           $scope.filterByStage('dev');
           $scope.updateThreads();
+          $scope.dev = false;
        }
 
         $scope.filterByStageResolved = function () {
+           $scope.setInitStageValues()
           $scope.filterByStage('resolved');
           $scope.updateThreads();
+          $scope.resolved = false;
        }
 
       $scope.filterByStageNotify = function () {
+         $scope.setInitStageValues()
           $scope.filterByStage('notify');
           $scope.updateThreads();
+          $scope.notify = false;
        }
 
        $scope.getNextThreads = function (threadNumber) {
        		//query.skip(25*threadNumber); -- infinite scroll?
        		console.log('getting next page of threads');
        }
+
+
+
 
        //$scope.getProfilePic('yefim323');
 
