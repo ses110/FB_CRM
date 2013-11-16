@@ -169,9 +169,6 @@ console.log('variables Initializing')
        		return "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1117432_1725380113_505551893_q.jpg";
        }
 
-       $scope.changeStage = function (thread) {
-       		console.log('changed stage');
-       }
 
        $scope.filterByStage = function (stage) {
           //alert(stage);
@@ -245,11 +242,13 @@ console.log('variables Initializing')
        $scope.changeStage = function (thread, stage) {
         var Thread = Parse.Object.extend("Threads");
         var th = new Thread();
-        th.id = th.get('id');
+        th.id = thread.id;
+        //console.log(thread.id);
 
         th.set("stage", stage);
-        thread.save(null, {
+        th.save(null, {
           success: function(point) {
+            console.log(point);
             alert('success');
             // Saved successfully.
           },
