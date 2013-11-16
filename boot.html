@@ -28,7 +28,7 @@
   </head>
 
   <body>
-  <div id="fb-root"></div>
+<div id="fb-root"></div>
     <script>
       Parse.initialize("FpRIiKC5uukYhujiDboitrw9EVU2zLSZbbawt9P6", "KkI7SNjpCDsroQzoFwETaRfD7te0QV1HfL9LuH9g");
         window.fbAsyncInit = function() {
@@ -65,11 +65,12 @@
 
     </script>
 
+
+
     <div class="topbar" style="margin-bottom: 0; padding-bottom:0;">
       <div class="topbar-inner" style="margin-bottom: 0; padding-bottom:0;">
         <div class="container-fluid" style="margin-bottom: 0; padding-bottom:0;">
           <a class="brand" href="#">Facebook CRM</a>
-
           <button onclick="login()">blah</button>
           <button onclick="readMessages()">read messages</button>
           <p class="pull-right">Logged in as <a href="#">username</a></p>
@@ -80,13 +81,40 @@
     <div class="container-fluid">
       <div class="sidebar">
         <div class="well">
-          <ul style="list-style-type:none; font-size: 1.15em;">
-            <li>Team Tasks</li>
-            <li>My Tasks</li>
-            <li>Online</li>
-            <li>New Campaign</li>
+          <ul style="list-style-type:none; font-size: 1.2em; ">
+            <li style="line-height: 2.5em;">Team Tasks</li>
+            <li style="line-height: 2.5em;">My Tasks</li>
+            <li style="line-height: 2.5em;">Online</li>
+            <li style="line-height: 2.5em;">New Campaign</li>
+          </ul>
+          <p style="margin-top:60px;">Email Support</p>
+          <ul style="list-style-type:none; font-size: 1.2em; ">
+            <li style="line-height: 2.5em;">
+              <img src="./images/red.png" style="margin-right: 2px; float: left;"> 
+                New
+            </li>
+            <li style="line-height: 2.5em;">
+              <img src="./images/orange.png" style="margin-right: 2px; float: left;">
+              In Dev
+            </li>
+            <li style="line-height: 2.5em;">
+              <img src="./images/green.png" style="margin-right: 2px; float: left;">
+              Resolved
+            </li>
+            <li style="line-height: 2.5em;">
+              <img src="./images/cyan.png" style="margin-right: 2px; float: left;">
+              Notify
+            </li>
+
+            <li style="line-height: 2.5em;">
+              <img src="./images/grid.png" style="margin-right: 2px; float: left;">
+              Add New
+            </li>
           </ul>
         </div>
+
+
+
       </div>
       <div class="content">
 
@@ -94,20 +122,21 @@
         <div class="row">
           <div style="float: left; width: 50%;">
             <div style="width: 100%; background-color: #EBEBEB;">
-              <p style="padding: 25px;">
+              <h4 style="padding: 25px;">
                 Email support
                 <img src="http://placehold.it/20x20" style="display: inline; float: right;">
-              </p>
+              </h4>
               
               
               <div style="min-width: 100%;">
-                <div style="width: 15%; float:left; height: 35px; background-color: #C0504D">4 new</div>
-                <div style="width: 15%; float:left; height: 35px; background-color: #F79646">4 in Dev</div>
-                <div style="width: 40%; float:left; height: 35px; background-color: #9BBB59">Resolved</div>
-                <div style="width: 30%; float:left; height: 35px; background-color: #4BACC6">7 Notify</div>
+                <div style="width: 15%; float:left; height: 35px; background-color: #C0504D; color: #632523; font-size: 1.15em; vertical-align: middle; line-height: 35px; text-align:center;">4 new</div>
+                <div style="width: 15%; float:left; height: 35px; background-color: #F79646; color: #984807; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">4 in Dev</div>
+                <div style="width: 40%; float:left; height: 35px; background-color: #9BBB59; color: #4F6228; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">10 Resolved</div>
+                <div style="width: 30%; float:left; height: 35px; background-color: #4BACC6; color: #215968; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">7 Notify</div>
               </div>
 
-              
+              <p style="padding-left: 10px">Contacts</p>
+
             </div>
 
             <table>
@@ -118,7 +147,10 @@
                   <p>Hi, I have a problem with the preorder button.</p>
                 </td>
                 <td>
-                  TAG
+                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
               <tr>
@@ -128,7 +160,10 @@
                   <p>Hi, I have a problem with the preorder button.</p>
                 </td>
                 <td>
-                  TAG
+                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
 
@@ -139,7 +174,10 @@
                   <p>Hi, I have a problem with the preorder button.</p>
                 </td>
                 <td>
-                  TAG
+                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
 
@@ -150,7 +188,10 @@
                   <p>Hi, I have a problem with the preorder button.</p>
                 </td>
                 <td>
-                  TAG
+                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
 
@@ -161,14 +202,17 @@
                   <p>Hi, I have a problem with the preorder button.</p>
                 </td>
                 <td>
-                  TAG
+                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
 
             </table>
 
           </div>
-          <div style="border-left: 1px solid #DEDEDE; float: left; width: 45%; background-color: #F2F2F2; min-height: 538px; padding: 10px;">
+          <div style="border-left: 1px solid #DEDEDE; float: left; width: 47%; background-color: #F2F2F2; min-height: 538px; padding: 10px;">
             <p><h4>Laura Ranola</h4></p>
 
           </div>
@@ -177,6 +221,7 @@
 
       </div>
     </div>
+
 
     <script>
       function login() {
