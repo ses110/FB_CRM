@@ -9,7 +9,7 @@
  * Date: @DATE
  */
 /* Reset.less
- * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
+ * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 html, body {
   margin: 0;
@@ -71,11 +71,6 @@ td {
   font-size: 100%;
   line-height: 1;
   font-family: inherit;
-}
-@font-face
-{
-  font-family: Gudea;
-  src: url('Gudea.otf');
 }
 table {
   border-collapse: collapse;
@@ -1680,10 +1675,9 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   float: left;
   display: block;
   padding: 4px 20px 12px;
-  margin: 6px 0 0 -20px;
+  margin: 4px 0 0 -20px;
   color: #ffffff;
-  font-size: 1.3em;
-  font-family: Gudea;
+  font-size: 20px;
   font-weight: 200;
   line-height: 1;
 }
@@ -2488,7 +2482,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   margin-bottom: 20px;
   padding-top: 19px;
   padding-bottom: 19px;
-  min-height: 750px;
+  min-height: 600px;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
 /**/

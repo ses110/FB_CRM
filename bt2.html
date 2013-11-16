@@ -83,13 +83,11 @@
           <img src="./images/fb_icon.png" style="float: left; margin-left: 25px; margin-right: 15px; margin-top:5px;">
           <a class="brand" href="#">Facebook CRM</a>
 
-          <button ng-click="login()">login</button>
-          <!--
+          <button ng-click="login()">blah</button>
           <button ng-click="readMessages()">read messages</button>
           <button ng-click="getProfilePic('yefim323')">get profile pic</button>
           <button ng-click="updatePics()">update Pics</button>
-          <button ng-click="addThread()">update threads</button>
-        -->
+          <button ng-click="updateThreads()">update threads</button>
 
           <p class="pull-right">Logged in as <a href="#">username</a></p>
         </div>
@@ -157,10 +155,10 @@
                 <img src="./images/gear.png" style="display: inline; float: right;">
               </h4>
               
-              <div  style="cursor:pointer; min-width: 100%; margin-bottom: 20px; height: 35px;">
+              <div style="min-width: 100%; margin-bottom: 20px; height: 35px;">
                 <div style="width: 15%; float:left; height: 35px; background-color: #C0504D; color: #632523; font-size: 1.15em; vertical-align: middle; line-height: 35px; text-align:center;">4 new</div>
                 <div style="width: 15%; float:left; height: 35px; background-color: #F79646; color: #984807; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">4 in Dev</div>
-                <div ng-click="updateThreads()" style="width: 40%; float:left; height: 35px; background-color: #9BBB59; color: #4F6228; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">15 Resolved</div>
+                <div style="width: 40%; float:left; height: 35px; background-color: #9BBB59; color: #4F6228; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">10 Resolved</div>
                 <div style="width: 30%; float:left; height: 35px; background-color: #4BACC6; color: #215968; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">7 Notify</div>
               </div>
 
@@ -170,24 +168,23 @@
 
             <!--THREADS BEGIN-->
 
-            <div style="overflow: auto; height: 450px;">
+          <div style="overflow:auto; height: 450px">
 
             <table>
-
-              <tr class="unstyled" ng-repeat="thread in threads">
+              <tr class="unstyled" ng-model-instant ng-repeat="thread in threads">
                 <td style="width: 60%;">
-                  <img src={{thread.get('proPic')}} style="float:left; padding-left: 15px; padding-right: 10px">
-                  <h7>{{thread.get('participants').data[1].name }}</h7>
-                  <p>{{thread.get('snippet')}}</p>
+                  <img ng-model-instant src={{"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1116314_629564354_324251643_q.jpg"}} style="float:left; padding-left: 15px; padding-right: 10px">
+                  <h7 ng-model-instant>{{thread.participants}}</h7>
+                  <p ng-model-instant>{{thread.snippet}}</p>
                 </td>
                 <td>
-                  <img src="./images/red_hollow.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
                   <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
-                  <img src="./images/green.png" style="margin-right: 2px; float: left;">
+                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
                   <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
-<!--
+
               <tr>
                 <td style="width: 60%;">
                    <img src="http://placehold.it/50x50" style="float:left; padding-left: 15px; padding-right: 10px">
@@ -244,19 +241,27 @@
                   <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
                 </td>
               </tr>
--->
-
+              <tr>
+                <td>TESTDATA</td>
+              </tr>
+              <tr>
+                <td>TESTDATA</td>
+              </tr>
+              <tr>
+                <td>TESTDATA</td>
+              </tr>
 
             </table>
 
           </div>
 
+
           </div>
           <!---Conversation Column-->
-          <div style="border-left: 1px solid #DEDEDE; float: left; width: 49%; background-color: #F2F2F2; min-height: 650px; background-image: url('./images/conversation.png'); background-repeat: no-repeat;">
+          <div style="border-left: 1px solid #DEDEDE; float: left; width: 49%; background-color: #F2F2F2; min-height: 650px;">
 
             <!-- Header div block: [ Name ] Assign To + Tag + -->
-              <!-- <div style="min-height: 100%; width=100%; margin-bottom: 30px;">
+              <div style="min-height: 100%; width=100%; margin-bottom: 30px;">
                 <span style="font-size: 1.5em; float: left; margin-left: 10px; margin-top: 28px; ">Laura Ranola</span>
                 <span style="font-size: 1.0em; float: left; margin-left: 10px;  margin-top: 30px; ">
                   Assign to 
@@ -265,10 +270,11 @@
                 <span style="font-size: 1.0em; float: left; margin-left: 10px;  margin-top: 30px; ">
                   Tag: 
                   <img src="./images/grid_add.png">
-                </span> -->
+                 </span>
                 <!-- Column header block !-->
+ 
 
-                <!-- <div>
+                <div>
                   <table class="bordered-table" style="margin-top: 20px">
                       <tbody>
                         <tr>
@@ -280,13 +286,13 @@
                 </div>
 
                 <div style="height: 400px">
-                  
-                </div> -->
+                  CHATBOX
+                </div>
 
                 <!-- The Bottom message box  !-->
-<!--               <div style="width: 100%; background-color: #EBEBEB; vertical-align: bottom;">
+              <div style="width: 100%; background-color: #EBEBEB; vertical-align: bottom;">
                 BOTTOM
-              </div> -->
+              </div>
           </div>
         </div>
 
