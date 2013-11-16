@@ -157,11 +157,11 @@
                 <img src="./images/gear.png" style="display: inline; float: right;">
               </h4>
               
-              <div  style="cursor:pointer; min-width: 100%; margin-bottom: 20px; height: 35px;">
-                <div style="width: 15%; float:left; height: 35px; background-color: #C0504D; color: #632523; font-size: 1.15em; vertical-align: middle; line-height: 35px; text-align:center;">4 new</div>
-                <div style="width: 15%; float:left; height: 35px; background-color: #F79646; color: #984807; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">4 in Dev</div>
-                <div ng-click="updateThreads()" style="width: 40%; float:left; height: 35px; background-color: #9BBB59; color: #4F6228; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">15 Resolved</div>
-                <div style="width: 30%; float:left; height: 35px; background-color: #4BACC6; color: #215968; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">7 Notify</div>
+              <div  style="min-width: 100%; margin-bottom: 20px; height: 35px;">
+                <div ng-click="filterByStageNew()" style="cursor:pointer; width: 15%; float:left; height: 35px; background-color: #C0504D; color: #632523; font-size: 1.15em; vertical-align: middle; line-height: 35px; text-align:center;">4 new</div>
+                <div ng-click="filterByStageDev()" style="cursor:pointer; width: 15%; float:left; height: 35px; background-color: #F79646; color: #984807; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">4 in Dev</div>
+                <div ng-click="updateThreads()" style="cursor:pointer; width: 40%; float:left; height: 35px; background-color: #9BBB59; color: #4F6228; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">15 Resolved</div>
+                <div ng-click="filterByStageNotify()" style="cursor:pointer; width: 30%; float:left; height: 35px; background-color: #4BACC6; color: #215968; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">7 Notify</div>
               </div>
 
               <p style="font-size: 1.3em; margin-left: 35px; height: 15px">Contacts</p>
@@ -176,7 +176,7 @@
 
               <tr class="unstyled" ng-repeat="thread in threads">
                 <td style="width: 60%;">
-                  <img src={{thread.get('proPic')}} style="float:left; padding-left: 15px; padding-right: 10px">
+                  <img src="http://www.ensembleespanol.org/communities/7/004/007/083/277/images/4599883932_50x50.jpg" style="float:left; padding-left: 15px; padding-right: 10px">
                   <h7>{{thread.get('participants').data[1].name }}</h7>
                   <p>{{thread.get('snippet')}}</p>
                 </td>

@@ -174,7 +174,48 @@ console.log('variables Initializing')
        }
 
        $scope.filterByStage = function (stage) {
+          alert(stage);
+          var Thread = Parse.Object.extend("Threads");
+          var query = new Parse.Query(Thread);
        		console.log('showing only threads with this stage');
+          $scope.threads = [];
+          query.equalTo("stage", stage);
+          query.limit('15');
+          query.find({
+            success: function(usersThreads) {
+              for (i = 0; i < usersThreads.length; i++) {
+                $scope.addThread(usersThreads[i]);
+                console.log(usersThreads[i].get('snippet'));
+                console.log(usersThreads[i].get('participants').data[1].name);
+                //console.log(usersThreads[i]);
+              }
+              $scope.updateThreads();
+              //usersThreads;
+              //console.log('loaded threads');
+              //console.log($scope.threads);
+            }
+        });
+       }
+
+       $scope.filterByStageNew = function () {
+        alert('washjhfahfk');
+          $scope.filterByStage('new');
+          $scope.updateThreads();
+       }
+
+        $scope.filterByStageDev = function () {
+          $scope.filterByStage('dev');
+          $scope.updateThreads();
+       }
+
+        $scope.filterByStageResolved = function () {
+          $scope.filterByStage('resolved');
+          $scope.updateThreads();
+       }
+
+      $scope.filterByStageNotify = function () {
+          $scope.filterByStage('notify');
+          $scope.updateThreads();
        }
 
        $scope.getNextThreads = function (threadNumber) {
