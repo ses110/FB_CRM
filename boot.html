@@ -71,68 +71,71 @@
           }());
         </script>
 
-      <div class="topbar" style="margin-bottom: 0; padding-bottom:0;">
-        <div class="topbar-inner" style="margin-bottom: 0; padding-bottom:0;">
-          <div class="container-fluid" style="margin-bottom: 0; padding-bottom:0;">
-            <a class="brand" href="#">Facebook CRM</a>
-            <button ng-click="login()">blah</button>
-            <button ng-click="readMessages()">read messages</button>
-            <p class="pull-right">Logged in as <a href="#">username</a></p>
-          </div>
+
+    <div class="topbar" style="margin-bottom: 0; padding-bottom:0;">
+      <div class="topbar-inner" style="margin-bottom: 0; padding-bottom:0;">
+        <div class="container-fluid" style="margin-bottom: 0; padding-bottom:0;">
+          <a class="brand" href="#">Facebook CRM</a>
+          <button onclick="login()">blah</button>
+          <button onclick="readMessages()">read messages</button>
+          <p class="pull-right">Logged in as <a href="#">username</a></p>
         </div>
       </div>
+    </div>
 
-      <div class="container-fluid">
-        <div class="sidebar">
-          <div class="well">
-            <ul style="list-style-type:none; font-size: 1.2em; width: 100%; margin-left: 0px">
-              <li style="padding-left: 20px; line-height: 3.1em; vertical-align: middle; background-color: #202020;">Team Tasks
-                <span style="background-image: url(./images/grey_icon.png); color:#ffffff; width: 30px; height: 20px; float: right; line-height: 20px; text-align: center; ">
-                  24
-                </span>
-              </li>
-              <li style="padding-left: 20px; line-height: 3.1em;">
-                My Tasks
-                <span style="background-image: url(./images/grey_icon.png); color:#ffffff; width: 30px; height: 20px; float: right; line-height: 20px; text-align: center;vertical-align: middle;">
-                  4
-                </span>
-              </li>
-              <li style="padding-left: 20px; line-height: 3.1em;">Online</li>
-              <li style="padding-left: 20px; line-height: 3.1em;">New Campaign +</li>
-            </ul>
-            <p style="padding-left: 20px; color: #666666; margin-top:60px; font-size: 1.2em; margin-bottom: 35px;">Email Support </p>
+    <div class="container-fluid">
+      <div class="sidebar">
+        <div class="well">
+          <ul style="list-style-type:none; font-size: 1.2em; width: 100%; margin-left: 0px">
+            <li style="padding-left: 20px; line-height: 3.1em; vertical-align: middle; background-color: #202020;">Team Tasks
+              <span style="background-image: url(./images/grey_icon.png); color:#ffffff; width: 30px; height: 20px; float: right; line-height: 20px; text-align: center; ">
+                24
+              </span>
+            </li>
+            <li style="padding-left: 20px; line-height: 3.1em;">
+              My Tasks
+              <span style="background-image: url(./images/grey_icon.png); color:#ffffff; width: 30px; height: 20px; float: right; line-height: 20px; text-align: center;vertical-align: middle;">
+                4
+              </span>
+            </li>
+            <li style="padding-left: 20px; line-height: 3.1em;">Online</li>
+            <li style="padding-left: 20px; line-height: 3.1em;">New Campaign +</li>
+          </ul>
+          <p style="padding-left: 20px; color: #666666; margin-top:60px; font-size: 1.2em; margin-bottom: 35px;">Email Support </p>
 
-            <ul style="list-style-type:none; font-size: 1.2em; ">
-              <li style="line-height: 3.0em; ">
-                <img src="./images/red.png" style="margin-right: 2px; float: left; padding-right: 10px;"> 
-                  New
-              </li>
-              <li style="line-height: 3.1em;">
-                <img src="./images/orange.png" style="margin-right: 2px; float: left; padding-right: 10px;">
-                In Dev
-              </li>
-              <li style="line-height: 3.1em;">
-                <img src="./images/green.png" style="margin-right: 2px; float: left; padding-right: 10px;">
-                Resolved
-              </li>
-              <li style="line-height: 2.5em;">
-                <img src="./images/cyan.png" style="margin-right: 2px; float: left; padding-right: 10px;">
-                Notify
-              </li>
+          <ul style="list-style-type:none; font-size: 1.2em; ">
+            <li style="line-height: 3.0em; ">
+              <img src="./images/red.png" style="margin-right: 2px; float: left; padding-right: 10px;"> 
+                New
+            </li>
+            <li style="line-height: 3.1em;">
+              <img src="./images/orange.png" style="margin-right: 2px; float: left; padding-right: 10px;">
+              In Dev
+            </li>
+            <li style="line-height: 3.1em;">
+              <img src="./images/green.png" style="margin-right: 2px; float: left; padding-right: 10px;">
+              Resolved
+            </li>
+            <li style="line-height: 2.5em;">
+              <img src="./images/cyan.png" style="margin-right: 2px; float: left; padding-right: 10px;">
+              Notify
+            </li>
 
-              <li style="line-height: 2.5em;">
-                <img src="./images/grid.png" style="margin-right: 2px; float: left; padding-right: 10px;">
-                Add New
-              </li>
-            </ul>
-          </div>
+            <li style="line-height: 2.5em;">
+              <img src="./images/grid.png" style="margin-right: 2px; float: left; padding-right: 10px;">
+              Add New
+            </li>
+          </ul>
         </div>
 
-        <div class="content">
+
+
+      </div>
+      <div class="content">
         <!-- Example row of columns -->
         <div class="row">
           <div style="float: left; width: 50%;">
-            <div style="width: 100%; background-color: #EBEBEB;">
+            <div style="width: 100%; height: 100%; background-color: #EBEBEB;">
               <h4 style="padding: 25px;">
                 Email support
                 <img src="./images/gear.png" style="display: inline; float: right;">
@@ -145,29 +148,11 @@
                 <div style="width: 30%; float:left; height: 35px; background-color: #4BACC6; color: #215968; font-size: 1.15em; vertical-align: middle; line-height: 35px;  text-align:center;">7 Notify</div>
               </div>
 
-              <p style="padding: 0px">Contacts</p>
+              <p style="padding: 10px">Contacts</p>
 
             </div>
 
             <table>
-
-              <tr>
-                <td style="width:60%">
-                  <img src="http://placehold.it/50x50" style="float:left; padding-left: 15px; padding-right: 10px">
-                  <h7>Name to be fetched</h7>
-                  <p>
-                    <script>
-                      document.write(readThread(0));
-                    </script>
-                  </p>
-                </td>
-                <td>
-                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
-                  <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
-                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
-                  <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
-                </td>
-              </tr>
 
               <tr>
                 <td style="width: 60%;">
@@ -226,25 +211,37 @@
                 </td>
               </tr>
 
-              <tr>
-                <td>
-                  <img src="http://placehold.it/50x50" style="float:left; padding-left: 15px; padding-right: 10px">
-                  <h7>Lisa Jefferson</h7>
-                  <p>Hi, I have a problem with the preorder button.</p>
-                </td>
-                <td>
-                  <img src="./images/red.png" style="margin-right: 2px; float: left;">
-                  <img src="./images/orange_hollow.png" style="margin-right: 2px; float: left;">
-                  <img src="./images/green_hollow.png" style="margin-right: 2px; float: left;">
-                  <img src="./images/cyan_hollow.png" style="margin-right: 2px; float: left;">
-                </td>
-              </tr>
-            </table>  
+
+            </table>
+
           </div>
-          <div style="border-left: 1px solid #DEDEDE; float: left; width: 47%; background-color: #F2F2F2; min-height: 538px; padding: 10px;">
-            <p><h4>Laura Ranola</h4></p>
+          <!---Conversation Column-->
+          <div style="border-left: 1px solid #DEDEDE; float: left; width: 49%; background-color: #F2F2F2; min-height: 650px;">
+
+              <!-- Header div block: [ Name ] Assign To + Tag + !-->
+              <div style="min-height: 100%; width=100%; margin-bottom: 30px;">
+                <span style="font-size: 1.5em; float: left; margin-left: 10px; margin-top: 28px; ">Laura Ranola</span>
+                <span style="font-size: 1.0em; float: left; margin-left: 10px;  margin-top: 30px; ">Assign to </span>
+                <span style="font-size: 1.0em; float: left; margin-left: 10px;  margin-top: 30px; ">Tag: </span>
+
+                <!-- Column header block !-->
+                <table class="bordered-table" style="margin-top: 20px">
+                    <tbody>
+                      <tr>
+                        <td style="width: 30%">Conversations</td>
+                        <td>Activities</td>
+                      </tr>
+                  </tbody>
+                </table>
+
+                <!-- The Bottom message box!-->
+              <div style="width: 100%; background-color: #EBEBEB; vertical-align: bottom;">
+                BOTTOM
+              </div>
           </div>
         </div>
+
+
       </div>
     </div>
   </body>
