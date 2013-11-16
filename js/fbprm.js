@@ -16,7 +16,7 @@ function fbprm($scope) {
           alert("User cancelled the Facebook login or did not fully authorize.");
         }
         });
-      }
+    }
 
     $scope.readMessages = function () {
     	console.log('blah');
@@ -76,7 +76,7 @@ function fbprm($scope) {
             });
        }
 
-       $scope.readThread(4);
+       $scope.readThread(9);
 
        //we should have a function that grabs all the threads and stores them in a $scope variable
        //we should then have a function that lets you grab a particular thread
