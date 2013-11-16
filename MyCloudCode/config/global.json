@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "FB_CRM": {
+            "applicationId": "FpRIiKC5uukYhujiDboitrw9EVU2zLSZbbawt9P6", 
+            "masterKey": "dks2wtzCkkrbVbeNGIoGkh0T7FnuPsFDpl4YHjJT"
+        }, 
+        "_default": {
+            "link": "FB_CRM"
+        }
+    }
+}
